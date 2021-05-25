@@ -1,0 +1,65 @@
+
+1.
+Create a database called school, 
+- CREATE database school;
+
+2.
+Create Student table with studentId, first_name, last_name and 
+address. Make studentId the primary key
+
+- CREATE TABLE student (
+		  'student _id 'INT not null,
+		  'first_name' varchar (50) not null,
+		  'last_name' varchar (50) not null,
+		  ' address' varchar (200) not null,
+		   PRIMARY KEY (student _id));
+3.
+Create Course table with courseId, course_name, course_credit. Use 
+courseId as primary key
+
+- CREATE TABLE Course (
+		 corse_id INT not null,
+		 course_name varchar (100) not null,
+		 course_credit varchar (100)not null,
+		 PRIMARY KEY (course_id);
+4.
+Insert 5 rows in each table:
+
+/*INSERT INTO 'student' VALUES (1,'za','ta','adwa'),
+		   INSERT INTO 'student' VALUES (2,'ti','ti','nebelet'),
+		   INSERT INTO 'student' VALUES (3,'mi','lu','shire'),
+		   INSERT INTO 'student' VALUES (4,'ne','ne','axum'),
+		   INSERT INTO 'student' VALUES (5,'wa','wa','mekele');
+		   _____________________________________________________
+		    INSERT INTO 'Course' VALUES ( 1,'java','A'),
+		 INSERT INTO 'Course' VALUES ( 2, 'dba', 'B'),
+		 INSERT INTO 'Course' VALUES ( 3, 'webservice','C'),
+		 INSERT INTO 'Course' VALUES ( 4, 'mule','D'),
+		 INSERT INTO 'Course' VALUES (  5, 'sql','E');*/
+5.
+Retrieve all rows from each table
+
+USE school
+      SELECT *  FROM students
+
+6.
+Retrieve a row whose id number is 3
+
+USE school
+		 SELECT * FROM students 
+		 WHERE studentid = 3
+7.
+Update any column in any row
+
+
+// this DUP operation SELECT * FROM Course
+		UPDATE Course
+		SET Course_name = 'mulesoft'
+		WHERE course_id = 4
+8.
+Delete specific rows in each table using their ids or other column 
+values
+
+/SELECT * FROM student;
+		 * DELETE FROM student 
+		 * WHERE student_id = 1;
