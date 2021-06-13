@@ -1,18 +1,16 @@
-
-	package jdbc.example;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-public class JdbcExample {
+   public static JDBC exericise
     public static void main(String[] args) throws SQLException {
 	Connection myConn = null;
 	Statement myStmt = null;
 	ResultSet myRs = null;
 	try {
 	    // 1. Get a connection to database
-	    myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/account", "root", "zayd1214");
+	    myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/world", "root", "zayd1214");
 	    System.out.println("Database connection successful!\n");
 	    // 2. Create a statement
 	    myStmt = myConn.createStatement();
@@ -32,4 +30,12 @@ public class JdbcExample {
 		myStmt.close();
 	    }
 	    if (myConn != null) {
-	;
+		myConn.close();
+	    }
+	}
+    }
+
+}
+
+
+
